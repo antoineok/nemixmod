@@ -40,10 +40,9 @@ public class ItemMod
 	
 	public static Item nemix_ingot, nemix_core_ingot, nemix_reinforced_ingot, nemix_sword, nemix_shovel, nemix_pickaxe, nemix_axe, nemix_hoe, nemix_helmet, nemix_chestplate, nemix_leggings, nemix_boots, nemix_apple, nemix_stick, nemix_core, nemix_reinforced_core, nemix_reinforced_sword, nemix_reinforced_pickaxe, nemix_reinforced_helmet ,nemix_reinforced_chestplate, nemix_reinforced_leggings, nemix_reinforced_boots,nemix_reinforced_axe, nemix_reinforced_hoe, nemix_reinforced_shovel;
 	public static void init()
-	{
+	{ 
 		nemix_ingot = new Item().setUnlocalizedName("nemix_ingot").setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_ingot");
 		nemix_core_ingot = new Item().setUnlocalizedName("nemix_core_ingot").setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_core_ingot");
-		nemix_reinforced_ingot = new Item().setUnlocalizedName("nemix_reinforced_ingot").setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_reinforced_ingot");
 		nemix_sword = new ItemNemixSword(ItemMod.NemixMatt).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_sword").setUnlocalizedName("nemix_sword");
 		nemix_pickaxe = new ItemNemixPickaxe(ItemMod.NemixMatt).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_pickaxe").setUnlocalizedName("nemix_pickaxe");
 		nemix_axe = new ItemNemixAxe(ItemMod.NemixMatt).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_axe").setUnlocalizedName("nemix_axe");
@@ -66,13 +65,13 @@ public class ItemMod
 		nemix_reinforced_chestplate = new ItemNemixReinforcedArmor(NemixReinforcedArm, 1).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_reinforced_chestplate").setUnlocalizedName("nemix_reinforced_chestplate");
 		nemix_reinforced_leggings = new ItemNemixReinforcedArmor(NemixReinforcedArm, 2).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_reinforced_leggings").setUnlocalizedName("nemix_reinforced_leggings");
 		nemix_reinforced_boots = new ItemNemixReinforcedArmor(NemixReinforcedArm, 3).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_reinforced_boots").setUnlocalizedName("nemix_reinforced_boots");
-		
+		nemix_reinforced_ingot = new Item().setUnlocalizedName("nemix_reinforced_ingot").setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_reinforced_ingot");
 	}
 	
 	public static void register()
 	{
 		GameRegistry.registerItem(ItemMod.nemix_ingot, "nemix_ingot");
-		GameRegistry.registerItem(ItemMod.nemix_reinforced_ingot, "nemix_core_ingot");
+		GameRegistry.registerItem(ItemMod.nemix_core_ingot, "nemix_core_ingot");
 		GameRegistry.registerItem(ItemMod.nemix_reinforced_ingot, "nemix_reinforced_ingot");
 		GameRegistry.registerItem(ItemMod.nemix_sword, "nemix_sword");
 		GameRegistry.registerItem(ItemMod.nemix_pickaxe, "nemix_pickaxe");
