@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nemixmod",
+  "name": "Nemix Mod",
+  "description": "Mod qualitatif.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://www.nemixcraft.com/",
+  "updateUrl": "",
+  "authorList": ["_nem05_"],
+  "credits": "L'equipe nemixcraft",
+  "logoFile": "assets/nemixmod/textures/blocks/mods.png",
+  "screenshots": [],
+  "dependencies": ["Forge"]
+}
+]
