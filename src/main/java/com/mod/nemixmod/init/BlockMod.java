@@ -49,7 +49,7 @@ public class BlockMod
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_shovel, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_shovel, 'C', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_ingot, 9), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_core_ingot, 'S', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_core_ingot, 1), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_core});
-		
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_apple, 1), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_ingot, 'S', Items.apple});
 		
 		
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_helmet, 1), new Object[] {"III", "I I", "   ", 'I', ItemMod.nemix_reinforced_ingot});
