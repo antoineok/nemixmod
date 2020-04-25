@@ -24,4 +24,6 @@ item.nemix_reinforced_leggings.name=Nemix reinforced leggings
 item.nemix_reinforced_boots.name=Nemix reinforced boots
 tile.nemix_block.name=Nemix Block
 tile.nemix_ore.name=Nemix Ore
+tile.nemix_barriere.name=Nemix barriere
+tile.nemix_reinforced_block.name=nemix reinforced block
 itemGroup.nemixtab=§a§kNE §2§lNemix Tab §a§kXO

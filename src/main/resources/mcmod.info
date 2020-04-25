@@ -1,8 +1,8 @@
 [
 {
   "modid": "nemixmod",
-  "name": "Nemix Mod",
-  "description": "Mod qualitatif.",
+  "name": "Nemixmod",
+  "description": "Mod créé pour le serveur minecraft Nemixcraft.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://www.nemixcraft.com/",

@@ -11,23 +11,31 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import scala.xml.PrettyPrinter.Item;
 
 public class BlockMod
 {
-	public static Block nemix_block, nemix_ore;
+	public static Block nemix_block, nemix_ore, nemix_barriere, nemix_reinforced_block;
 	public static void init()
 	{
-		nemix_block = new BlockBasic(Material.rock).setBlockName("nemix_block").setCreativeTab(NemixMod.nemixtab).setBlockTextureName(Reference.MOD_ID + ":nemix_block");
-		nemix_ore = new BlockBasic(Material.rock).setBlockName("nemix_ore").setCreativeTab(NemixMod.nemixtab).setBlockTextureName(Reference.MOD_ID + ":nemix_ore");
+		nemix_block = new BlockBasic(Material.rock).setBlockName("nemix_block").setHardness(10).setResistance(50).setCreativeTab(NemixMod.nemixtab).setBlockTextureName(Reference.MOD_ID + ":nemix_block");
+		nemix_ore = new BlockBasic(Material.rock).setBlockName("nemix_ore").setHardness(5).setResistance(30).setCreativeTab(NemixMod.nemixtab).setBlockTextureName(Reference.MOD_ID + ":nemix_ore");
+		nemix_barriere = new BlockBasic(Material.glass).setBlockName("nemix_barriere").setHardness(-1).setResistance(9999).setCreativeTab(CreativeTabs.tabMisc).setBlockTextureName(Reference.MOD_ID + ":nemix_barriere");
+		nemix_reinforced_block = new BlockBasic(Material.rock).setBlockName("nemix_reinforced_block").setHardness(10).setResistance(50).setCreativeTab(NemixMod.nemixtab).setBlockTextureName(Reference.MOD_ID + ":nemix_reinforced_block");
+
 	}
 	
 	public static void register()
 	{
 		GameRegistry.registerBlock(nemix_block, nemix_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(nemix_ore, nemix_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(nemix_barriere, nemix_barriere.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(nemix_reinforced_block, nemix_reinforced_block.getUnlocalizedName().substring(5));
 		GameRegistry.addSmelting(BlockMod.nemix_ore, new ItemStack(ItemMod.nemix_ingot, 1), 10.0F);
 		GameRegistry.addRecipe(new ItemStack(BlockMod.nemix_block, 1), new Object[] {"###", "###", "###", '#', ItemMod.nemix_ingot});
+		GameRegistry.addRecipe(new ItemStack(BlockMod.nemix_reinforced_block, 1), new Object[] {"###", "###", "###", '#', ItemMod.nemix_reinforced_ingot});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_ingot, 9), new Object[] {"#", '#', BlockMod.nemix_block});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_ingot, 9), new Object[] {"#", '#', BlockMod.nemix_reinforced_block});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_sword, 1), new Object[] {"  N", "  N", "  S", 'N', ItemMod.nemix_ingot, 'S', ItemMod.nemix_stick});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_sword, 1), new Object[] {" N ", " N ", " S ", 'N', ItemMod.nemix_ingot, 'S', ItemMod.nemix_stick});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_sword, 1), new Object[] {"N  ", "N  ", "S  ", 'N', ItemMod.nemix_ingot, 'S', ItemMod.nemix_stick});
@@ -41,21 +49,20 @@ public class BlockMod
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_shovel, 1), new Object[] {" N ", " S ", " S ", 'N', ItemMod.nemix_ingot, 'S', ItemMod.nemix_stick});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_stick, 1), new Object[] {"DND", "DND", 'N', ItemMod.nemix_ingot, 'D', Items.diamond});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_core, 1), new Object[] {" B ", "BNB", " B ", 'N', Items.nether_star, 'B', BlockMod.nemix_block});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_ingot, 1), new Object[] {"ONO", "NGN", "ONO", 'O', Blocks.obsidian, 'N', ItemMod.nemix_ingot, 'G', Blocks.gold_block});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_core, 1), new Object[] {"OOO", "OCO", "OOO", 'O', Blocks.obsidian, 'C', ItemMod.nemix_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_sword, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_sword, 'C', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_pickaxe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_pickaxe, 'C', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_axe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_axe, 'C', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_hoe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_hoe, 'C', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_shovel, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_shovel, 'C', ItemMod.nemix_reinforced_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_ingot, 9), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_core_ingot, 'S', ItemMod.nemix_reinforced_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_core_ingot, 1), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_apple, 1), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_ingot, 'S', Items.apple});
 		
 		
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_helmet, 1), new Object[] {"III", "I I", "   ", 'I', ItemMod.nemix_reinforced_ingot});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_chestplate, 1), new Object[] {"I I", "III", "III", 'I', ItemMod.nemix_reinforced_ingot});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_leggings, 1), new Object[] {"III", "I I", "I I", 'I', ItemMod.nemix_reinforced_ingot});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_boots, 1), new Object[] {"I I", "I I", 'I', ItemMod.nemix_reinforced_ingot});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_helmet, 1), new Object[] {"LCL", "CRC", "LCL", 'L', ItemMod.nemix_reinforced_ingot, 'C', ItemMod.nemix_helmet, 'R', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_chestplate, 1), new Object[] {"LCL", "CRC", "LCL", 'L', ItemMod.nemix_reinforced_ingot, 'C', ItemMod.nemix_chestplate, 'R', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_leggings, 1), new Object[] {"LCL", "CRC", "LCL", 'L', ItemMod.nemix_reinforced_ingot, 'C', ItemMod.nemix_leggings, 'R', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_boots, 1), new Object[] {"LCL", "CRC", "LCL", 'L', ItemMod.nemix_reinforced_ingot, 'C', ItemMod.nemix_boots, 'R', ItemMod.nemix_reinforced_core});
 		
 		
 	}

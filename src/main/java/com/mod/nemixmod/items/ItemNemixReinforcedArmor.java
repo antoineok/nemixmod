@@ -23,12 +23,12 @@ public class ItemNemixReinforcedArmor extends ItemArmor {
 	{
 		if(stack.getItem() == ItemMod.nemix_reinforced_leggings)
 		{
-			return Reference.MOD_ID + ":textures/models/armor/nemix_layer_2.png";
+			return Reference.MOD_ID + ":textures/models/armor/layout_nemix_renforced_layer_2.png";
 		}
 		
 		else if(stack.getItem() == ItemMod.nemix_reinforced_helmet || stack.getItem() == ItemMod.nemix_reinforced_chestplate || stack.getItem() == ItemMod.nemix_reinforced_boots) 
 		{ 
-			return Reference.MOD_ID + ":textures/models/armor/nemix_layer_1.png";
+			return Reference.MOD_ID + ":textures/models/armor/layout_nemix_renforced_layer_1.png";
 		}
 		return null;
 	}
