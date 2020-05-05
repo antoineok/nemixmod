@@ -51,11 +51,11 @@ public class BlockMod
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_core, 1), new Object[] {" B ", "BNB", " B ", 'N', Items.nether_star, 'B', BlockMod.nemix_block});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_ingot, 1), new Object[] {"ONO", "NGN", "ONO", 'O', Blocks.obsidian, 'N', ItemMod.nemix_ingot, 'G', Blocks.gold_block});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_core, 1), new Object[] {"OOO", "OCO", "OOO", 'O', Blocks.obsidian, 'C', ItemMod.nemix_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_sword, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_sword, 'C', ItemMod.nemix_reinforced_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_pickaxe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_pickaxe, 'C', ItemMod.nemix_reinforced_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_axe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_axe, 'C', ItemMod.nemix_reinforced_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_hoe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_hoe, 'C', ItemMod.nemix_reinforced_core});
-		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_shovel, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_ingot, 'S', ItemMod.nemix_shovel, 'C', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_sword, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_reinforced_ingot, 'S', ItemMod.nemix_sword, 'C', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_pickaxe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_reinforced_ingot, 'S', ItemMod.nemix_pickaxe, 'C', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_axe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_reinforced_ingot, 'S', ItemMod.nemix_axe, 'C', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_hoe, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_reinforced_ingot, 'S', ItemMod.nemix_hoe, 'C', ItemMod.nemix_reinforced_core});
+		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_reinforced_shovel, 1), new Object[] {"ISI", "SCS", "ISI", 'I', ItemMod.nemix_reinforced_ingot, 'S', ItemMod.nemix_shovel, 'C', ItemMod.nemix_reinforced_core});
 		GameRegistry.addRecipe(new ItemStack(ItemMod.nemix_apple, 1), new Object[] {"III", "ISI", "III", 'I', ItemMod.nemix_ingot, 'S', Items.apple});
 		
 		
