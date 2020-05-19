@@ -32,7 +32,7 @@ import net.minecraft.item.Item.ToolMaterial;
 public class ItemNemixHammer extends ItemPickaxe {
 
 
-	protected ItemNemixHammer(ToolMaterial p_i45347_1_) {
+	public ItemNemixHammer(ToolMaterial p_i45347_1_) {
 		super(p_i45347_1_);
 		// TODO Auto-generated constructor stub
 	}
