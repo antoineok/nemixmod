@@ -5,6 +5,7 @@ import com.mod.nemixmod.Reference;
 import com.mod.nemixmod.items.ItemNemixApple;
 import com.mod.nemixmod.items.ItemNemixArmor;
 import com.mod.nemixmod.items.ItemNemixAxe;
+import com.mod.nemixmod.items.ItemNemixHammer;
 import com.mod.nemixmod.items.ItemNemixHoe;
 import com.mod.nemixmod.items.ItemNemixPickaxe;
 import com.mod.nemixmod.items.ItemNemixReinforcedArmor;
@@ -45,7 +46,7 @@ public class ItemMod
 	
 	
 	
-	public static Item nemix_ingot, nemix_reinforced_ingot, nemix_sword, nemix_shovel, nemix_pickaxe, nemix_axe, nemix_hoe, nemix_helmet, nemix_chestplate, nemix_leggings, nemix_boots, nemix_apple, nemix_stick, nemix_core, nemix_reinforced_core, nemix_reinforced_sword, nemix_reinforced_pickaxe, nemix_reinforced_helmet ,nemix_reinforced_chestplate, nemix_reinforced_leggings, nemix_reinforced_boots,nemix_reinforced_axe, nemix_reinforced_hoe, nemix_reinforced_shovel ,miner_helmet, miner_chestplate, miner_leggings, miner_boots;
+	public static Item nemix_ingot, nemix_reinforced_ingot, nemix_sword, nemix_shovel, nemix_pickaxe, nemix_axe, nemix_hoe, nemix_helmet, nemix_chestplate, nemix_leggings, nemix_boots, nemix_apple, nemix_stick, nemix_core, nemix_reinforced_core, nemix_reinforced_sword, nemix_reinforced_pickaxe, nemix_reinforced_helmet ,nemix_reinforced_chestplate, nemix_reinforced_leggings, nemix_reinforced_boots,nemix_reinforced_axe, nemix_reinforced_hoe, nemix_reinforced_shovel ,miner_helmet, miner_chestplate, miner_leggings, miner_boots, nemix_hammer;
 	public static void init()
 	{ 
 		nemix_ingot = new Item().setUnlocalizedName("nemix_ingot").setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_ingot");
@@ -76,7 +77,7 @@ public class ItemMod
 		miner_chestplate = new ItemMinerArmor(ItemMod.MinerArm, 1).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":miner_chestplate").setUnlocalizedName("miner_chestplate");
 		miner_leggings = new ItemMinerArmor(ItemMod.MinerArm, 2).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":miner_leggings").setUnlocalizedName("miner_leggings");
 		miner_boots = new ItemMinerArmor(ItemMod.MinerArm, 3).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":miner_boots").setUnlocalizedName("miner_boots");
-	
+		nemix_hammer = new ItemNemixHammer(ItemMod.NemixMatt).setCreativeTab(NemixMod.nemixtab).setTextureName(Reference.MOD_ID + ":nemix_hammer").setUnlocalizedName("nemix_hammer");
 		
 	}
 	
@@ -110,5 +111,6 @@ public class ItemMod
 		GameRegistry.registerItem(ItemMod.miner_chestplate, "miner_chestplate");
 		GameRegistry.registerItem(ItemMod.miner_leggings, "miner_leggings");
 		GameRegistry.registerItem(ItemMod.miner_boots, "miner_boots");
+		GameRegistry.registerItem(ItemMod.nemix_hammer, "nemix_hammer");
 	}
 }
