@@ -20,9 +20,7 @@ import org.apache.commons.logging.Log;
 import com.mod.nemixmod.init.BlockMod;
 import com.mod.nemixmod.init.ItemMod;
 
-import ibxm.Player;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -43,9 +41,12 @@ public class ItemNemixHammer extends ItemPickaxe {
 		boolean isStone = world.getBlock(x, y, z) == Blocks.stone;
 		boolean isStoneBrick = world.getBlock(x, y, z) == Blocks.stonebrick;
 		boolean isSandtone = world.getBlock(x, y, z) == Blocks.sandstone;
+		
 
 		boolean[] vanillaBlocks = new boolean[] { isCobble, isStone, isStoneBrick, isSandtone };
-		float yaw = Minecraft.getMinecraft().thePlayer.prevRenderYawOffset;
+		if(elb instanceof EntityPlayer){
+			EntityPlayer player = (EntityPlayer) elb; 
+		float yaw = player.prevRenderYawOffset;
 
 		while (yaw > 360) {
 			System.out.print("On retire un tour" + "\n");
@@ -60,10 +61,9 @@ public class ItemNemixHammer extends ItemPickaxe {
 		if (yaw >= 135 && yaw < 225) {
 			System.out.print("North" + yaw + "\n");
 			if (y < 6) {
-				Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(
+				player.addChatMessage(new ChatComponentText(
 						EnumChatFormatting.GOLD + "Tu ne peut pas utiliser le nemix hammer en desous de la"));
-				Minecraft.getMinecraft().thePlayer
-						.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
 			} else if (vanillaBlocks[0] || vanillaBlocks[1] || vanillaBlocks[2]) {
 				for (int ix = -1; ix < 2; ++ix) {
 					for (int iy = -1; iy < 2; ++iy) {
@@ -90,10 +90,9 @@ public class ItemNemixHammer extends ItemPickaxe {
 		} else if (yaw >= 225 && yaw < 315) {
 			System.out.print("East" + yaw + "\n");
 			if (y < 6) {
-				Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(
+				player.addChatMessage(new ChatComponentText(
 						EnumChatFormatting.GOLD + "Tu ne peut pas utiliser le nemix hammer en desous de la"));
-				Minecraft.getMinecraft().thePlayer
-						.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
 			} else if (vanillaBlocks[0] || vanillaBlocks[1] || vanillaBlocks[2]) {
 				for (int ix = -1; ix < 2; ++ix) {
 					for (int iy = -1; iy < 2; ++iy) {
@@ -120,10 +119,9 @@ public class ItemNemixHammer extends ItemPickaxe {
 		} else if (yaw >= 46 && yaw < 135) {
 			System.out.print("West" + yaw + "\n");
 			if (y < 6) {
-				Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(
+				player.addChatMessage(new ChatComponentText(
 						EnumChatFormatting.GOLD + "Tu ne peut pas utiliser le nemix hammer en desous de la"));
-				Minecraft.getMinecraft().thePlayer
-						.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
 			} else if (vanillaBlocks[0] || vanillaBlocks[1] || vanillaBlocks[2]) {
 				for (int ix = -1; ix < 2; ++ix) {
 					for (int iy = -1; iy < 2; ++iy) {
@@ -154,10 +152,9 @@ public class ItemNemixHammer extends ItemPickaxe {
 		{
 			System.out.print("South" + yaw + "\n");
 			if (y < 6) {
-				Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(
+				player.addChatMessage(new ChatComponentText(
 						EnumChatFormatting.GOLD + "Tu ne peut pas utiliser le nemix hammer en desous de la"));
-				Minecraft.getMinecraft().thePlayer
-						.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "couche 6...."));
 			} else if (vanillaBlocks[0] || vanillaBlocks[1] || vanillaBlocks[2]) {
 				for (int ix = -1; ix < 2; ++ix) {
 					for (int iy = -1; iy < 2; ++iy) {
@@ -185,7 +182,7 @@ public class ItemNemixHammer extends ItemPickaxe {
 		}
 
 				
-		stack.setItemDamage(stack.getItemDamage() - 1);
+		}
 		
 		return false;
 	}
@@ -193,7 +190,7 @@ public class ItemNemixHammer extends ItemPickaxe {
 
 
 }
-
+//fix par antoineok
 
 
 
